@@ -20,6 +20,8 @@
 
 
    **Warning, reaction and friend functionality is written but not yet functional**
+
+   ![Insominia Screenshot](./images/Screenshot%20(232).png)
   ## Installation
   This project does require a few steps for installation: 
   * First step is to clone this repository into your local vscode through GitHub 
