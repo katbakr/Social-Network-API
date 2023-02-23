@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const {
     getThoughts,
-    getThoughtsById,
+    getThoughtById,
     createThought,
     updateThought,
     deleteThought,
@@ -10,9 +10,13 @@ const {
     deleteReaction
 } = require('../../controllers/thoughtController');
 
-router.route('/').get(getThoughts).post(createThought);
+router.route('/').get(getThoughts);
 
-router.route('/:id').get(getThoughtsById).put(updateThought).delete(deleteThought);
+router.route('/:userId').post(createThought);
+
+router.route('/:thoughtId').get(getThoughtById).put(updateThought).delete(deleteThought);
+
+// router.route('/:userId/:thoughtId')
 
 router.route('/:thoughtId/:reactions').post(createReaction);
 
